@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckMyShoppingCart</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="hello_world">Salut le monde !</string>
+    <string name="header_list_pick_allergy">À quoi êtes-vous allergique ?</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="allergy_description_arachid">Intolérance aux noix (noisettes, cacahuètes etc &#8230;)</string>
+    <string name="allergy_description_gluten">Intolérance aux produits faits de céréal comme le blé ou le seigle (pain, biscuits, pâtes etc &#8230;)</string>
+    <string name="allergy_description_lactose">Intolérance au lait, yaourts etc &#8230;</string>
+    <string name="allergy_name_arachid">Arachides</string>
+    <string name="allergy_name_gluten">Gluten</string>
+    <string name="allergy_name_lactose">Lactose</string>
+    <string name="btn_scan_product">Scanner un produit</string>
+    <string name="article_name_nutella">Nutella</string>
+    <string name="article_name_candia_milk">Lait Candia</string>
+    <string name="article_name_coco_pops">Coco Pops</string>
+    <string name="article_name_lu_biscuit">Petit Beurre de Lu</string>
+    <string name="article_name_matin_leger_milk">Lait Matin Léger</string>
+    <string name="article_name_miel_pops">Miel Pops</string>
+    <string name="article_description_lu_biscuit">Le Véritable Petit Beurre - LU - 200 g</string>
+    <string name="article_description_matin_leger_milk">Matin Léger - Lactel - 1L</string>
+    <string name="article_description_miel_pops">Miel Pops - Kellogg\'s - 375g</string>
+    <string name="article_description_nutella">Nutella - Ferrero - 400g</string>
+    <string name="article_description_coco_pops">Coco Pops - Kellogg\'s - 400g</string>
+    <string name="article_description_candia_milk">Viva - Candia - 1L</string>
+    <string name="caution_product_can_cause_allergies">Attention ! Ce produit peut provoquer des allergies !</string>
+    <string name="product_allergies_free">Ce produit ne provoquera pas d\'allergies. Tu peux l\'acheter, fonce !</string>
+    <string name="article_unknown">Produit inconnu</string>
+</resources>

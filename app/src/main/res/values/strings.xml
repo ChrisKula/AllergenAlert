@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CheckMyShoppingCart</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_scan_product">Scan a product</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="header_list_pick_allergy">What are you allergic to ?</string>
+
+    <string name="allergy_name_arachid">Arachid</string>
+    <string name="allergy_name_lactose">Lactose</string>
+    <string name="allergy_name_gluten">Gluten</string>
+
+    <string name="allergy_description_arachid">Intolerance to nuts (hazelnuts, peanuts etc &#8230;)</string>
+    <string name="allergy_description_lactose">Intolerance to milk, yogurts etc &#8230;</string>
+    <string name="allergy_description_gluten">Intolerance to products made of cereal like wheat or rye (bread, biscuits, pasta etc &#8230;)</string>
+
+    <string name="article_name_lu_biscuit">Lu Biscuit</string>
+    <string name="article_name_nutella">Nutella</string>
+    <string name="article_name_coco_pops">Coco Pops</string>
+    <string name="article_name_miel_pops">Miel Pops</string>
+    <string name="article_name_matin_leger_milk">Easy Morning Milk</string>
+    <string name="article_name_candia_milk">Candia Milk</string>
+
+    <string name="article_ean_code_lu_biscuit" translatable="false">3017760000109</string>
+    <string name="article_ean_code_nutella" translatable="false">3017624044003</string>
+    <string name="article_ean_code_coco_pops" translatable="false">5053827101493</string>
+    <string name="article_ean_code_miel_pops" translatable="false">3159470001011</string>
+    <string name="article_ean_code_matin_leger_milk" translatable="false">3428273090011</string>
+    <string name="article_ean_code_candia_milk" translatable="false">3176571983008</string>
+
+    <string name="article_description_lu_biscuit">"Veritable Petit Beurre" - LU - 200g</string>
+    <string name="article_description_nutella">Nutella - Ferrero - 400g</string>
+    <string name="article_description_coco_pops">Coco Pops - Kellogg\'s - 400g</string>
+    <string name="article_description_miel_pops">Miel Pops - Kellogg\'s - 375g</string>
+    <string name="article_description_matin_leger_milk">Easy Morning - Lactel - 1L</string>
+    <string name="article_description_candia_milk">Viva - Candia - 1L</string>
+
+    <string name="caution_product_can_cause_allergies">Caution ! This product can cause allergies !</string>
+    <string name="product_allergies_free">This product won\'t cause allergies. Go ahead !</string>
+
+    <string name="article_unknown">Article unknown</string>
+
+    <string-array name="list_allergies_name">
+        <item>@string/allergy_name_arachid</item>
+        <item>@string/allergy_name_lactose</item>
+        <item>@string/allergy_name_gluten</item>
+    </string-array>
+
+    <string-array name="list_allergies_description">
+        <item>@string/allergy_description_arachid</item>
+        <item>@string/allergy_description_lactose</item>
+        <item>@string/allergy_description_gluten</item>
+    </string-array>
+
+
+    <string-array name="list_articles_name">
+        <item>@string/article_name_candia_milk</item>
+        <item>@string/article_name_matin_leger_milk</item>
+
+        <item>@string/article_name_miel_pops</item>
+        <item>@string/article_name_coco_pops</item>
+
+        <item>@string/article_name_lu_biscuit</item>
+        <item>@string/article_name_nutella</item>
+    </string-array>
+
+
+    <string-array name="list_articles_ean_code">
+        <item>@string/article_ean_code_candia_milk</item>
+        <item>@string/article_ean_code_matin_leger_milk</item>
+
+        <item>@string/article_ean_code_miel_pops</item>
+        <item>@string/article_ean_code_coco_pops</item>
+
+        <item>@string/article_ean_code_lu_biscuit</item>
+        <item>@string/article_ean_code_nutella</item>
+    </string-array>
+
+    <string-array name="list_articles_description">
+        <item>@string/article_description_candia_milk</item>
+        <item>@string/article_description_matin_leger_milk</item>
+
+        <item>@string/article_description_miel_pops</item>
+        <item>@string/article_description_coco_pops</item>
+
+        <item>@string/article_description_lu_biscuit</item>
+        <item>@string/article_description_nutella</item>
+    </string-array>
+
+</resources>
