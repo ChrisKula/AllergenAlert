@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Check ma products !</string>
+    <string name="app_name">Allergen Protect</string>
     <string name="action_settings">Paramètres</string>
     <string name="hello_world">Salut le monde !</string>
     <string name="header_list_pick_allergy">À quoi êtes-vous allergique ?</string>
@@ -31,5 +31,6 @@
     <string name="dialog_positive_button_first_launch">C\'est parti !</string>
     <string name="dialog_title_first_launch">Nouveau ?</string>
     <string name="first_scan_product">Tout d\'abord, scannez un produit !</string>
-    <string name="click_here_for_more_info">Cliquez ici pour plus d\'infos</string>
+    <string name="click_here_for_more_info"><u>Cliquez ici pour plus d\'infos</u></string>
+    <string name="action_share">Partager</string>
 </resources>

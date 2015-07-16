@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ShareActionProvider;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -146,12 +147,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            Intent settingsIntent = new Intent(this, SettingsActivity.class);
-            startActivity(settingsIntent);
-            return true;
-        }
 
+        switch (id) {
+            case R.id.action_settings:
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                startActivity(settingsIntent);
+                return true;
+
+            case R.id.action_share:
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send");
+                shareIntent.setType("text/plain");
+                startActivity(shareIntent);
+                return true;
+
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -187,7 +198,10 @@ public class MainActivity extends AppCompatActivity {
                         new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                TextView textV = (TextView) v;
+                                textV.setTextColor(Color.parseColor("#0000B2"));
                                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(art.getMoreInfoLink()));
+
                                 startActivity(browserIntent);
                             }
                         }
@@ -221,7 +235,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (allergyInArticleDetected) {
-                    Toast.makeText(this, getResources().getString(R.string.caution_product_can_cause_allergies), Toast.LENGTH_LONG).show();
                     tv = ((TextView) findViewById(R.id.article_allergies_info));
                     tv.setText(getResources().getString(R.string.caution_product_can_cause_allergies));
                     tv.setTextColor(Color.RED);
@@ -229,13 +242,12 @@ public class MainActivity extends AppCompatActivity {
                     v.vibrate(500);
 
                 } else {
-                    Toast.makeText(this, getResources().getString(R.string.product_allergies_free), Toast.LENGTH_LONG).show();
                     tv = ((TextView) findViewById(R.id.article_allergies_info));
                     tv.setText(getResources().getString(R.string.product_allergies_free));
                     tv.setTextColor(Color.BLACK);
                 }
             } else {
-                Toast.makeText(this, getResources().getString(R.string.article_unknown), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.article_unknown), Toast.LENGTH_LONG).show();
             }
         }
     }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Check ma products !</string>
+    <string name="app_name">Allergen Protect</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
     <string name="btn_scan_product">Scan a product</string>
     <string name="title_activity_settings">Settings</string>
     <string name="header_list_pick_allergy">What are you allergic to ?</string>
@@ -47,7 +48,7 @@
     <string name="product_allergies_free">This product won\'t cause allergies. Go ahead !</string>
 
     <string name="article_unknown">Article unknown</string>
-    <string name="click_here_for_more_info">Click here for more info</string>
+    <string name="click_here_for_more_info"><u>Click here for more info</u></string>
     <string-array name="list_allergies_name">
         <item>@string/allergy_name_arachid</item>
         <item>@string/allergy_name_lactose</item>
