@@ -5,11 +5,12 @@ import android.graphics.Bitmap;
 import java.util.ArrayList;
 
 public class Article {
-    private double price;
-    private String name;
-    private String eanCode;
-    private String description;
+    private double price = 0.0;
+    private String name = "";
+    private String eanCode = "";
+    private String description = "";
     private Bitmap image;
+    private String moreInfoLink = "";
 
     public ArrayList<String> allergies = new ArrayList<>();
 
@@ -18,11 +19,20 @@ public class Article {
         this.price = price;
     }
 
+
     public Article(String name, String description, String eanCode, double price) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.eanCode = eanCode;
+    }
+
+    public Article(String name, String description, String eanCode, double price, String link) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.eanCode = eanCode;
+        this.moreInfoLink = link;
     }
 
     public double getPrice() {
@@ -71,6 +81,14 @@ public class Article {
 
     public void setAllergies(ArrayList<String> allergies) {
         this.allergies = allergies;
+    }
+
+    public String getMoreInfoLink() {
+        return moreInfoLink;
+    }
+
+    public void setMoreInfoLink(String moreInfoLink) {
+        this.moreInfoLink = moreInfoLink;
     }
 
     @Override

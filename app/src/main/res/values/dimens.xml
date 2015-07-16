@@ -4,4 +4,10 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="header_text_size">25sp</dimen>
     <dimen name="checkbox_text_size">15sp</dimen>
+
+
+    <dimen name="article_name">35sp</dimen>
+    <dimen name="article_description">20sp</dimen>
+    <dimen name="article_price">25sp</dimen>
+    <dimen name="article_more_info_link">20sp</dimen>
 </resources>

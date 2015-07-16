@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CheckMyShoppingCart</string>
+    <string name="app_name">Check ma products !</string>
     <string name="action_settings">Paramètres</string>
     <string name="hello_world">Salut le monde !</string>
     <string name="header_list_pick_allergy">À quoi êtes-vous allergique ?</string>
@@ -25,6 +25,11 @@
     <string name="article_description_coco_pops">Coco Pops - Kellogg\'s - 400g</string>
     <string name="article_description_candia_milk">Viva - Candia - 1L</string>
     <string name="caution_product_can_cause_allergies">Attention ! Ce produit peut provoquer des allergies !</string>
-    <string name="product_allergies_free">Ce produit ne provoquera pas d\'allergies. Tu peux l\'acheter, fonce !</string>
+    <string name="product_allergies_free">Ce produit ne provoquera pas d\'allergies. </string>
     <string name="article_unknown">Produit inconnu</string>
+    <string name="dialog_message_first_launch">C\'est la première fois que vous lancez l\'application. Vous devez d\'abord définir vos allergies !</string>
+    <string name="dialog_positive_button_first_launch">C\'est parti !</string>
+    <string name="dialog_title_first_launch">Nouveau ?</string>
+    <string name="first_scan_product">Tout d\'abord, scannez un produit !</string>
+    <string name="click_here_for_more_info">Cliquez ici pour plus d\'infos</string>
 </resources>

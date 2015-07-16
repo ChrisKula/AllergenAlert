@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CheckMyShoppingCart</string>
+    <string name="app_name">Check ma products !</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="btn_scan_product">Scan a product</string>
     <string name="title_activity_settings">Settings</string>
     <string name="header_list_pick_allergy">What are you allergic to ?</string>
+
+    <string name="dialog_message_first_launch">You launched this app for the first time. First, you have to define your allergies</string>
+    <string name="dialog_title_first_launch">You seem new around here</string>
+    <string name="dialog_positive_button_first_launch">Let\'s go !</string>
 
     <string name="allergy_name_arachid">Arachid</string>
     <string name="allergy_name_lactose">Lactose</string>
@@ -37,11 +41,13 @@
     <string name="article_description_matin_leger_milk">Easy Morning - Lactel - 1L</string>
     <string name="article_description_candia_milk">Viva - Candia - 1L</string>
 
+
+    <string name="first_scan_product">First, scan a product !</string>
     <string name="caution_product_can_cause_allergies">Caution ! This product can cause allergies !</string>
     <string name="product_allergies_free">This product won\'t cause allergies. Go ahead !</string>
 
     <string name="article_unknown">Article unknown</string>
-
+    <string name="click_here_for_more_info">Click here for more info</string>
     <string-array name="list_allergies_name">
         <item>@string/allergy_name_arachid</item>
         <item>@string/allergy_name_lactose</item>
