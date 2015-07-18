@@ -13,12 +13,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="@string/header_list_pick_allergy"
-        android:textSize="@dimen/header_text_size"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="@dimen/header_text_size" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rechercher une allergie" />
 
     <ListView
         android:id="@+id/list_allergies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Attention. Cette application ne remplace l'avis d'un médecin. Si vous avez le moindre doute, contactez d'abord un médecin"
+        android:textColor="@color/red"
+        android:textStyle="italic" />
 </LinearLayout>

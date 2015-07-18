@@ -45,10 +45,12 @@
 
     <string name="first_scan_product">First, scan a product !</string>
     <string name="caution_product_can_cause_allergies">Caution ! This product can cause allergies !</string>
-    <string name="product_allergies_free">This product won\'t cause allergies. Go ahead !</string>
+    <string name="product_allergies_free">No allergies detected </string>
 
     <string name="article_unknown">Article unknown</string>
-    <string name="click_here_for_more_info"><u>Click here for more info</u></string>
+    <string name="article_found">Article found !</string>
+
+    <string name="click_here_for_more_info"><u>Click here for more info </u></string>
     <string-array name="list_allergies_name">
         <item>@string/allergy_name_arachid</item>
         <item>@string/allergy_name_lactose</item>

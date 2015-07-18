@@ -13,7 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ShareActionProvider;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.itescia.rkouraichi_ckula.allergenalert.R;
 import com.itescia.rkouraichi_ckula.allergenalert.pojos.Article;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
         sp = getSharedPreferences(SettingsActivity.SETTINGS_FILE, 0);
 
         if (sp.getBoolean(APP_FIRST_LAUNCH, true)) {
-            sp.edit().putBoolean(APP_FIRST_LAUNCH, false).apply();
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(getResources().getString(R.string.dialog_message_first_launch));
             builder.setTitle(getResources().getString(R.string.dialog_title_first_launch));
             builder.setPositiveButton(getResources().getString(R.string.dialog_positive_button_first_launch),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+                            sp.edit().putBoolean(APP_FIRST_LAUNCH, false).apply();
                             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
                             startActivity(intent);
                         }
@@ -154,12 +156,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(settingsIntent);
                 return true;
 
-            case R.id.action_share:
-                Intent shareIntent = new Intent();
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send");
-                shareIntent.setType("text/plain");
-                startActivity(shareIntent);
+            case R.id.action_scan_product:
+                takePicture(null);
                 return true;
 
         }
@@ -199,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 TextView textV = (TextView) v;
-                                textV.setTextColor(Color.parseColor("#0000B2"));
+                                textV.setTextColor(getResources().getColor(R.color.darkblue));
                                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(art.getMoreInfoLink()));
 
                                 startActivity(browserIntent);
@@ -211,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText(Double.toString(article.getPrice()) + "€");
 
                 boolean allergyInArticleDetected = false;
+                String allergiesInside = "";
                 if (article.getAllergies().size() > 0) {
                     boolean userAllergyArachid = sp.getBoolean(MainActivity.ALLERGY_ARACHID, false);
                     boolean userAllergyGluten = sp.getBoolean(MainActivity.ALLERGY_GLUTEN, false);
@@ -219,16 +218,20 @@ public class MainActivity extends AppCompatActivity {
                     for (String allergy : article.getAllergies()) {
                         if (allergy.equals(MainActivity.ALLERGY_ARACHID) && userAllergyArachid) {
                             allergyInArticleDetected = true;
+                            allergiesInside = allergiesInside + "\nArachid";
                             break;
                         }
 
                         if (allergy.equals(MainActivity.ALLERGY_GLUTEN) && userAllergyGluten) {
                             allergyInArticleDetected = true;
+                            allergiesInside = allergiesInside + "\nGluten";
+
                             break;
                         }
 
                         if (allergy.equals(MainActivity.ALLERGY_LACTOSE) && userAllergyLactose) {
                             allergyInArticleDetected = true;
+                            allergiesInside = allergiesInside + "\nLactose";
                             break;
                         }
                     }
@@ -236,18 +239,25 @@ public class MainActivity extends AppCompatActivity {
 
                 if (allergyInArticleDetected) {
                     tv = ((TextView) findViewById(R.id.article_allergies_info));
-                    tv.setText(getResources().getString(R.string.caution_product_can_cause_allergies));
-                    tv.setTextColor(Color.RED);
+                    tv.setText(getResources().getString(R.string.caution_product_can_cause_allergies) + "\nAllergie(s) détectée(s) : " + allergiesInside);
+                    tv.setText("Allergie(s) détectée(s) : " + allergiesInside);
+                    tv.setTextColor(getResources().getColor(R.color.red));
+                    ((Button) findViewById(R.id.display_alternatives_products)).setVisibility(View.VISIBLE);
+
                     Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    v.vibrate(500);
+                    v.vibrate(1000);
 
                 } else {
                     tv = ((TextView) findViewById(R.id.article_allergies_info));
                     tv.setText(getResources().getString(R.string.product_allergies_free));
-                    tv.setTextColor(Color.BLACK);
+                    tv.setTextColor(getResources().getColor(R.color.green));
+                    ((Button) findViewById(R.id.display_alternatives_products)).setVisibility(View.INVISIBLE);
+
                 }
             } else {
                 Toast.makeText(this, getResources().getString(R.string.article_unknown), Toast.LENGTH_LONG).show();
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(500);
             }
         }
     }
