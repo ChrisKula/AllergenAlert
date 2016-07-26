@@ -57,7 +57,5 @@ public class AllergyAdapter extends ArrayAdapter {
 
         // the view must be returned to our activity
         return v;
-
     }
-
 }

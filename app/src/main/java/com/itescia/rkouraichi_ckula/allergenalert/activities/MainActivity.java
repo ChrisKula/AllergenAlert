@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -13,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +22,6 @@ import com.itescia.rkouraichi_ckula.allergenalert.R;
 import com.itescia.rkouraichi_ckula.allergenalert.pojos.Article;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -242,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText(getResources().getString(R.string.caution_product_can_cause_allergies) + "\nAllergie(s) détectée(s) : " + allergiesInside);
                     tv.setText("Allergie(s) détectée(s) : " + allergiesInside);
                     tv.setTextColor(getResources().getColor(R.color.red));
-                    ((Button) findViewById(R.id.display_alternatives_products)).setVisibility(View.VISIBLE);
+                    (findViewById(R.id.display_alternatives_products)).setVisibility(View.VISIBLE);
 
                     Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v.vibrate(1000);
@@ -251,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
                     tv = ((TextView) findViewById(R.id.article_allergies_info));
                     tv.setText(getResources().getString(R.string.product_allergies_free));
                     tv.setTextColor(getResources().getColor(R.color.green));
-                    ((Button) findViewById(R.id.display_alternatives_products)).setVisibility(View.INVISIBLE);
+                    (findViewById(R.id.display_alternatives_products)).setVisibility(View.INVISIBLE);
 
                 }
             } else {

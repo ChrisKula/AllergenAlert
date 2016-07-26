@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">Allergen Protect</string>
     <string name="action_settings">Paramètres</string>
-    <string name="hello_world">Salut le monde !</string>
     <string name="header_list_pick_allergy">À quoi êtes-vous allergique ?</string>
     <string name="title_activity_settings">Paramètres</string>
     <string name="allergy_description_arachid">Intolérance aux noix (noisettes, cacahuètes etc &#8230;)</string>
@@ -33,6 +32,5 @@
     <string name="click_here_for_more_info"><u>Cliquez ici pour plus d\'infos </u></string>
     <string name="action_share">Partager</string>
     <string name="article_found">Produit trouvé !</string>
-    <string name="article_ean_code_miel_pops" translatable="false"></string>
     <string name="product_allergies_free">Aucune allergie détectée </string>
 </resources>
